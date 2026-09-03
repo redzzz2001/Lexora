@@ -8,332 +8,340 @@
 
 <style>
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-  --bg: #080a0f;
-  --card: #10131a;
-  --card-hover: #151922;
-  --text: #f5f7ff;
-  --muted: #7f889b;
-  --accent: #aab3ff;
-  --accent2: #d8a8ff;
-  --border: rgba(255,255,255,.08);
+    --bg: #080a0f;
+    --card: #10131a;
+    --card-hover: #151922;
+    --text: #f5f7ff;
+    --muted: #7f889b;
+    --accent: #aab3ff;
+    --border: rgba(255,255,255,.08);
 }
 
 body {
-  min-height: 100vh;
-  background:
-    radial-gradient(circle at 50% -10%, #242a48 0%, transparent 42%),
-    var(--bg);
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% -10%, #242a48 0%, transparent 42%),
+        var(--bg);
 
-  color: var(--text);
+    color: var(--text);
 
-  font-family:
-    Inter,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
 
-  padding: 30px 18px;
+    padding: 30px 18px;
 }
 
 main {
-  width: 100%;
-  max-width: 1050px;
-  margin: auto;
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
 }
 
 header {
-  text-align: center;
-  padding-top: 55px;
-  margin-bottom: 42px;
+    text-align: center;
+    padding-top: 55px;
+    margin-bottom: 42px;
 }
 
 .logo {
-  font-size: clamp(52px, 8vw, 86px);
-  font-weight: 900;
-  letter-spacing: -6px;
-  line-height: .95;
+    font-size: clamp(52px, 8vw, 86px);
+    font-weight: 900;
+    letter-spacing: -6px;
+    line-height: .95;
 
-  background:
-    linear-gradient(
-      100deg,
-      #ffffff 0%,
-      #bec4ff 48%,
-      #dda8ff 100%
+    background: linear-gradient(
+        100deg,
+        #ffffff 0%,
+        #bec4ff 48%,
+        #dda8ff 100%
     );
 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-  margin-top: 16px;
-  color: var(--muted);
-  font-size: 17px;
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 17px;
 }
 
+/* PESQUISA */
+
 .search-box {
-  display: flex;
-  gap: 8px;
+    display: flex;
+    gap: 8px;
 
-  background: rgba(16,19,26,.86);
-  backdrop-filter: blur(20px);
+    background: rgba(16,19,26,.86);
+    backdrop-filter: blur(20px);
 
-  border: 1px solid var(--border);
-  border-radius: 20px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
 
-  padding: 8px;
+    padding: 8px;
 
-  box-shadow:
-    0 25px 80px rgba(0,0,0,.35),
-    inset 0 1px 0 rgba(255,255,255,.03);
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.03);
 }
 
 input {
-  flex: 1;
-  min-width: 0;
+    flex: 1;
+    min-width: 0;
 
-  border: 0;
-  outline: none;
+    border: 0;
+    outline: none;
 
-  background: transparent;
-  color: white;
+    background: transparent;
+    color: white;
 
-  font-size: 21px;
+    font-size: 21px;
 
-  padding: 19px 20px;
+    padding: 19px 20px;
 }
 
 input::placeholder {
-  color: #535b6a;
+    color: #535b6a;
 }
 
 button {
-  border: 0;
-  outline: none;
+    border: 0;
+    outline: none;
 
-  border-radius: 14px;
+    border-radius: 14px;
 
-  padding: 0 28px;
+    padding: 0 28px;
 
-  background: white;
-  color: #101116;
+    background: white;
+    color: #101116;
 
-  font-size: 15px;
-  font-weight: 800;
+    font-size: 15px;
+    font-weight: 800;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  transition: .15s;
+    transition: .15s;
 }
 
 button:hover {
-  transform: translateY(-1px);
-  background: #e7e9ff;
+    transform: translateY(-1px);
+    background: #e7e9ff;
 }
 
 button:active {
-  transform: scale(.97);
+    transform: scale(.97);
 }
 
 .examples {
-  text-align: center;
+    text-align: center;
+    margin-top: 15px;
 
-  margin-top: 15px;
-
-  color: #697284;
-  font-size: 14px;
+    color: #697284;
+    font-size: 14px;
 }
 
+/* STATUS */
+
 .status {
-  margin-top: 38px;
-  margin-bottom: 15px;
+    margin-top: 38px;
+    margin-bottom: 15px;
 
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
+    display: flex;
+    justify-content: space-between;
 
-  min-height: 24px;
+    gap: 15px;
+    min-height: 24px;
 }
 
 .status-left {
-  color: #8d96aa;
-  font-size: 14px;
+    color: #8d96aa;
+    font-size: 14px;
 }
 
 .status-right {
-  color: #687184;
-  font-size: 13px;
+    color: #687184;
+    font-size: 13px;
 }
 
+/* RESULTADOS */
+
 .results {
-  display: grid;
+    display: grid;
 
-  grid-template-columns:
-    repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns:
+        repeat(auto-fill, minmax(180px, 1fr));
 
-  gap: 11px;
+    gap: 11px;
 
-  padding-bottom: 70px;
+    padding-bottom: 70px;
 }
 
 .word {
-  background: var(--card);
+    background: var(--card);
 
-  border: 1px solid var(--border);
+    border: 1px solid var(--border);
+    border-radius: 14px;
 
-  border-radius: 14px;
+    padding: 17px 18px;
 
-  padding: 17px 18px;
+    font-size: 16px;
 
-  font-size: 16px;
+    cursor: pointer;
 
-  cursor: pointer;
+    overflow-wrap: anywhere;
 
-  overflow-wrap: anywhere;
-
-  transition: .15s;
+    transition: .15s;
 }
 
 .word:hover {
-  background: var(--card-hover);
+    background: var(--card-hover);
 
-  transform: translateY(-3px);
+    transform: translateY(-3px);
 
-  border-color:
-    rgba(174,182,255,.32);
+    border-color:
+        rgba(174,182,255,.32);
 }
 
 .prefix {
-  color: var(--accent);
-  font-weight: 800;
+    color: var(--accent);
+    font-weight: 800;
 }
 
 .empty {
-  grid-column: 1 / -1;
+    grid-column: 1 / -1;
 
-  text-align: center;
+    text-align: center;
 
-  color: #687184;
+    color: #687184;
 
-  padding: 70px 20px;
+    padding: 70px 20px;
 
-  border:
-    1px dashed
-    rgba(255,255,255,.08);
+    border:
+        1px dashed
+        rgba(255,255,255,.08);
 
-  border-radius: 20px;
+    border-radius: 20px;
 }
 
+/* LOADING */
+
 .loader-wrap {
-  grid-column: 1 / -1;
+    grid-column: 1 / -1;
 
-  text-align: center;
+    text-align: center;
 
-  padding: 60px 20px;
+    padding: 60px 20px;
 
-  color: #8b94a6;
+    color: #8b94a6;
 }
 
 .loader {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 
-  margin: 0 auto 18px;
+    margin: 0 auto 18px;
 
-  border-radius: 50%;
+    border-radius: 50%;
 
-  border:
-    3px solid
-    rgba(255,255,255,.1);
+    border:
+        3px solid
+        rgba(255,255,255,.1);
 
-  border-top-color: var(--accent);
+    border-top-color: var(--accent);
 
-  animation:
-    spin .7s linear infinite;
+    animation:
+        spin .7s linear infinite;
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
+/* TOAST */
+
 .toast {
-  position: fixed;
+    position: fixed;
 
-  left: 50%;
-  bottom: 24px;
+    left: 50%;
+    bottom: 24px;
 
-  transform:
-    translate(-50%, 25px);
+    transform:
+        translate(-50%, 25px);
 
-  opacity: 0;
+    opacity: 0;
 
-  pointer-events: none;
+    pointer-events: none;
 
-  background: white;
-  color: #11131a;
+    background: white;
+    color: #11131a;
 
-  padding: 12px 19px;
+    padding: 12px 19px;
 
-  border-radius: 999px;
+    border-radius: 999px;
 
-  font-size: 14px;
-  font-weight: 700;
+    font-size: 14px;
+    font-weight: 700;
 
-  box-shadow:
-    0 12px 40px
-    rgba(0,0,0,.3);
+    box-shadow:
+        0 12px 40px
+        rgba(0,0,0,.3);
 
-  transition: .2s;
+    transition: .2s;
 }
 
 .toast.show {
-  opacity: 1;
+    opacity: 1;
 
-  transform:
-    translate(-50%, 0);
+    transform:
+        translate(-50%, 0);
 }
+
+/* MOBILE */
 
 @media(max-width: 600px) {
 
-  body {
-    padding: 20px 13px;
-  }
+    body {
+        padding: 20px 13px;
+    }
 
-  header {
-    padding-top: 35px;
-  }
+    header {
+        padding-top: 35px;
+    }
 
-  .logo {
-    letter-spacing: -4px;
-  }
+    .logo {
+        letter-spacing: -4px;
+    }
 
-  .search-box {
-    flex-direction: column;
-  }
+    .search-box {
+        flex-direction: column;
+    }
 
-  button {
-    height: 52px;
-  }
+    button {
+        height: 52px;
+    }
 
-  .results {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
+    .results {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
 
-  .status {
-    flex-direction: column;
-    gap: 4px;
-  }
+    .status {
+        flex-direction: column;
+        gap: 4px;
+    }
 }
 </style>
 </head>
@@ -343,80 +351,88 @@ button:active {
 <main>
 
 <header>
-  <div class="logo">
-    Lexora
-  </div>
 
-  <div class="subtitle">
-    Encontre palavras pelo começo.
-  </div>
+    <div class="logo">
+        Lexora
+    </div>
+
+    <div class="subtitle">
+        Encontre palavras pelo começo.
+    </div>
+
 </header>
+
 
 <div class="search-box">
 
-  <input
-    id="search"
-    type="text"
-    placeholder="Digite pi, car, pro..."
-    maxlength="30"
-    autocomplete="off"
-    spellcheck="false"
-  >
+    <input
+        id="search"
+        type="text"
+        placeholder="Digite pi, car, pro..."
+        maxlength="30"
+        autocomplete="off"
+        spellcheck="false"
+    >
 
-  <button id="searchButton">
-    Buscar
-  </button>
+    <button id="searchButton">
+        Buscar
+    </button>
 
 </div>
+
 
 <div class="examples">
-  Exemplo: pi → piloto, pimenta, pintura, piscina...
+    Exemplo: pi → piloto, pimenta, pintura, piscina...
 </div>
+
 
 <div class="status">
 
-  <div
-    id="statusLeft"
-    class="status-left"
-  >
-    Carregando palavras...
-  </div>
+    <div
+        id="statusLeft"
+        class="status-left"
+    >
+        Carregando palavras...
+    </div>
 
-  <div
-    id="statusRight"
-    class="status-right"
-  ></div>
+    <div
+        id="statusRight"
+        class="status-right"
+    ></div>
 
 </div>
 
+
 <div
-  id="results"
-  class="results"
+    id="results"
+    class="results"
 >
 
-  <div class="loader-wrap">
+    <div class="loader-wrap">
 
-    <div class="loader"></div>
+        <div class="loader"></div>
 
-    Carregando dicionário...
+        Carregando dicionário...
 
-  </div>
+    </div>
 
 </div>
 
 </main>
 
+
 <div
-  id="toast"
-  class="toast"
+    id="toast"
+    class="toast"
 >
-  Palavra copiada
+    Palavra copiada
 </div>
+
 
 <script>
 
 const DICTIONARY_URL =
-  "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/pt_br/pt_br_50k.txt";
+    "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/pt_br/pt_br_50k.txt";
 
 const MAX_RESULTS = 100;
 
@@ -424,449 +440,672 @@ let words = [];
 let normalizedWords = [];
 let loaded = false;
 
+
 const searchInput =
-  document.getElementById("search");
+    document.getElementById("search");
 
 const searchButton =
-  document.getElementById("searchButton");
+    document.getElementById("searchButton");
 
 const results =
-  document.getElementById("results");
+    document.getElementById("results");
 
 const statusLeft =
-  document.getElementById("statusLeft");
+    document.getElementById("statusLeft");
 
 const statusRight =
-  document.getElementById("statusRight");
+    document.getElementById("statusRight");
 
 const toast =
-  document.getElementById("toast");
+    document.getElementById("toast");
+
 
 function normalize(text) {
-  return text
-    .normalize("NFD")
-    .replace(
-      /[\u0300-\u036f]/g,
-      ""
-    )
-    .toLowerCase()
-    .trim();
+
+    return text
+        .normalize("NFD")
+        .replace(
+            /[\u0300-\u036f]/g,
+            ""
+        )
+        .toLowerCase()
+        .trim();
+
 }
+
+
+/* CARREGA DICIONÁRIO */
 
 async function loadDictionary() {
 
-  try {
+    try {
 
-    const response =
-      await fetch(DICTIONARY_URL);
+        const response =
+            await fetch(
+                DICTIONARY_URL
+            );
 
-    if (!response.ok) {
-      throw new Error(
-        "Não foi possível carregar o dicionário."
-      );
-    }
+        if (!response.ok) {
 
-    const text =
-      await response.text();
+            throw new Error(
+                "Erro ao carregar dicionário."
+            );
 
-    const seen =
-      new Set();
-
-    words =
-      text
-
-      .split(/\r?\n/)
-
-      .map(line => {
-
-        const lastSpace =
-          line.lastIndexOf(" ");
-
-        if (lastSpace === -1) {
-          return null;
         }
 
-        const word =
-          line
-          .slice(0, lastSpace)
-          .trim();
+        const text =
+            await response.text();
 
-        const frequency =
-          Number(
-            line
-            .slice(lastSpace + 1)
+        const seen =
+            new Set();
+
+
+        words =
+            text
+
+            .split(/\r?\n/)
+
+            .map(line => {
+
+                /*
+                    A última parte da linha
+                    é a frequência.
+
+                    Todo o resto forma
+                    a palavra.
+
+                    Se vier:
+                    "a gora 1000"
+
+                    vira:
+                    "agora"
+                */
+
+                const parts =
+                    line
+                    .trim()
+                    .split(/\s+/);
+
+                if (
+                    parts.length < 2
+                ) {
+                    return null;
+                }
+
+                const frequency =
+                    Number(
+                        parts.pop()
+                    ) || 0;
+
+                /*
+                    Junta qualquer espaço
+                    que tenha aparecido
+                    dentro da palavra.
+                */
+
+                const word =
+                    parts.join("");
+
+                return {
+                    word,
+                    frequency
+                };
+
+            })
+
+            .filter(item => {
+
+                if (!item) {
+                    return false;
+                }
+
+                const word =
+                    item.word;
+
+                /*
+                    Só letras.
+
+                    Nada de espaços,
+                    números ou símbolos.
+                */
+
+                if (
+                    !/^[A-Za-zÀ-ÿ]+$/
+                    .test(word)
+                ) {
+                    return false;
+                }
+
+                /*
+                    Ignora letras soltas.
+                */
+
+                if (
+                    word.length < 2
+                ) {
+                    return false;
+                }
+
+                const normalized =
+                    normalize(word);
+
+                /*
+                    Remove duplicatas.
+                */
+
+                if (
+                    seen.has(normalized)
+                ) {
+                    return false;
+                }
+
+                seen.add(
+                    normalized
+                );
+
+                return true;
+
+            });
+
+
+        /*
+            Mais usadas primeiro.
+        */
+
+        words.sort(
+            (a, b) =>
+                b.frequency -
+                a.frequency
+        );
+
+
+        normalizedWords =
+            words.map(
+                item =>
+                    normalize(
+                        item.word
+                    )
+            );
+
+
+        loaded = true;
+
+
+        statusLeft.textContent =
+            words.length
+            .toLocaleString(
+                "pt-BR"
+            )
+            +
+            " palavras carregadas";
+
+
+        statusRight.textContent =
+            "mais comuns primeiro";
+
+
+        results.innerHTML = `
+
+            <div class="empty">
+
+                Digite o começo
+                de uma palavra.
+
+            </div>
+
+        `;
+
+
+        searchInput.focus();
+
+
+        if (
+            searchInput
+            .value
             .trim()
-          ) || 0;
-
-        return {
-          word,
-          frequency
-        };
-
-      })
-
-      .filter(item => {
-
-        if (!item) return false;
-
-        const word =
-          item.word;
-
-        if (
-          !/^[A-Za-zÀ-ÿ]+$/
-          .test(word)
         ) {
-          return false;
+
+            searchWords();
+
         }
 
-        if (
-          word.length < 2
-        ) {
-          return false;
-        }
-
-        const normalized =
-          normalize(word);
-
-        if (
-          seen.has(normalized)
-        ) {
-          return false;
-        }
-
-        seen.add(normalized);
-
-        return true;
-
-      });
-
-    words.sort(
-      (a, b) =>
-        b.frequency -
-        a.frequency
-    );
-
-    normalizedWords =
-      words.map(item =>
-        normalize(item.word)
-      );
-
-    loaded = true;
-
-    statusLeft.textContent =
-      words.length
-      .toLocaleString("pt-BR")
-      +
-      " palavras carregadas";
-
-    statusRight.textContent =
-      "mais comuns primeiro";
-
-    results.innerHTML = `
-      <div class="empty">
-        Digite o começo de uma palavra.
-      </div>
-    `;
-
-    searchInput.focus();
-
-    if (
-      searchInput.value.trim()
-    ) {
-      searchWords();
     }
 
-  }
+    catch(error) {
 
-  catch(error) {
+        console.error(error);
 
-    console.error(error);
 
-    statusLeft.textContent =
-      "Erro ao carregar palavras";
+        statusLeft.textContent =
+            "Erro ao carregar palavras";
 
-    statusRight.textContent =
-      "";
 
-    results.innerHTML = `
-      <div class="empty">
-        Não foi possível carregar o dicionário.
-        <br><br>
-        Verifique sua conexão com a internet.
-      </div>
-    `;
+        statusRight.textContent =
+            "";
 
-  }
+
+        results.innerHTML = `
+
+            <div class="empty">
+
+                Não foi possível carregar
+                o dicionário.
+
+                <br><br>
+
+                Verifique sua conexão.
+
+            </div>
+
+        `;
+
+    }
 
 }
+
+
+/* BUSCA */
 
 function searchWords() {
 
-  if (!loaded) {
-    return;
-  }
+    if (!loaded) {
+        return;
+    }
 
-  const original =
-    searchInput.value.trim();
 
-  const prefix =
-    normalize(original);
+    const original =
+        searchInput
+        .value
+        .trim();
 
-  if (!prefix) {
 
-    results.innerHTML = `
-      <div class="empty">
-        Digite o começo de uma palavra.
-      </div>
-    `;
+    const prefix =
+        normalize(original);
 
-    statusLeft.textContent =
-      words.length
-      .toLocaleString("pt-BR")
-      +
-      " palavras carregadas";
 
-    statusRight.textContent =
-      "mais comuns primeiro";
+    if (!prefix) {
 
-    return;
+        results.innerHTML = `
 
-  }
+            <div class="empty">
 
-  const matches = [];
+                Digite o começo
+                de uma palavra.
 
-  let total = 0;
+            </div>
 
-  for (
-    let i = 0;
-    i < words.length;
-    i++
-  ) {
+        `;
 
-    if (
-      normalizedWords[i]
-      .startsWith(prefix)
-    ) {
 
-      total++;
+        statusLeft.textContent =
+            words.length
+            .toLocaleString(
+                "pt-BR"
+            )
+            +
+            " palavras carregadas";
 
-      if (
-        matches.length <
-        MAX_RESULTS
-      ) {
 
-        matches.push(
-          words[i].word
-        );
+        statusRight.textContent =
+            "mais comuns primeiro";
 
-      }
+
+        return;
 
     }
 
-  }
 
-  renderMatches(
+    const matches = [];
+
+    let total = 0;
+
+
+    for (
+        let i = 0;
+        i < words.length;
+        i++
+    ) {
+
+        if (
+            normalizedWords[i]
+            .startsWith(prefix)
+        ) {
+
+            total++;
+
+
+            if (
+                matches.length
+                <
+                MAX_RESULTS
+            ) {
+
+                matches.push(
+                    words[i].word
+                );
+
+            }
+
+        }
+
+    }
+
+
+    renderMatches(
+        matches,
+        prefix,
+        total
+    );
+
+}
+
+
+/* MOSTRA RESULTADOS */
+
+function renderMatches(
     matches,
     prefix,
     total
-  );
-
-}
-
-function renderMatches(
-  matches,
-  prefix,
-  total
 ) {
 
-  statusLeft.textContent =
-    total === 1
+    statusLeft.textContent =
+        total === 1
 
-    ? "1 palavra encontrada"
+        ? "1 palavra encontrada"
 
-    : total
-      .toLocaleString("pt-BR")
-      +
-      " palavras encontradas";
+        :
 
-  statusRight.textContent =
-    total > MAX_RESULTS
+        total
+        .toLocaleString(
+            "pt-BR"
+        )
+        +
+        " palavras encontradas";
 
-    ? "Mostrando as " +
-      MAX_RESULTS +
-      " mais usadas"
 
-    : "Mais comuns primeiro";
+    statusRight.textContent =
+        total > MAX_RESULTS
 
-  if (
-    matches.length === 0
-  ) {
+        ?
 
-    results.innerHTML = `
-      <div class="empty">
-        Nenhuma palavra encontrada começando com
-        <strong>
-          ${escapeHTML(searchInput.value)}
-        </strong>.
-      </div>
-    `;
+        "Mostrando as "
+        +
+        MAX_RESULTS
+        +
+        " mais usadas"
 
-    return;
+        :
 
-  }
+        "Mais comuns primeiro";
 
-  results.innerHTML = "";
-
-  const fragment =
-    document.createDocumentFragment();
-
-  matches.forEach(word => {
-
-    const card =
-      document.createElement("div");
-
-    card.className =
-      "word";
-
-    const prefixLength =
-      searchInput
-      .value
-      .trim()
-      .length;
-
-    const start =
-      word.slice(
-        0,
-        prefixLength
-      );
-
-    const rest =
-      word.slice(
-        prefixLength
-      );
-
-    card.innerHTML = `
-      <span class="prefix">
-        ${escapeHTML(start)}
-      </span>${escapeHTML(rest)}
-    `;
-
-    card.addEventListener(
-      "click",
-      () => copyWord(word)
-    );
-
-    fragment.appendChild(
-      card
-    );
-
-  });
-
-  results.appendChild(
-    fragment
-  );
-
-}
-
-async function copyWord(word) {
-
-  try {
-
-    await navigator
-      .clipboard
-      .writeText(word);
-
-    showToast(
-      word + " copiado"
-    );
-
-  }
-
-  catch {
-
-    showToast(word);
-
-  }
-
-}
-
-function showToast(text) {
-
-  toast.textContent =
-    text;
-
-  toast.classList.add(
-    "show"
-  );
-
-  clearTimeout(
-    window.toastTimer
-  );
-
-  window.toastTimer =
-    setTimeout(
-      () => {
-
-        toast.classList.remove(
-          "show"
-        );
-
-      },
-      1200
-    );
-
-}
-
-function escapeHTML(text) {
-
-  const div =
-    document.createElement("div");
-
-  div.textContent =
-    text;
-
-  return div.innerHTML;
-
-}
-
-let searchTimer;
-
-searchInput.addEventListener(
-  "input",
-  () => {
-
-    clearTimeout(
-      searchTimer
-    );
-
-    searchTimer =
-      setTimeout(
-        searchWords,
-        50
-      );
-
-  }
-);
-
-searchInput.addEventListener(
-  "keydown",
-  event => {
 
     if (
-      event.key === "Enter"
+        matches.length === 0
     ) {
 
-      searchWords();
+        results.innerHTML = `
+
+            <div class="empty">
+
+                Nenhuma palavra encontrada
+                começando com
+
+                <strong>
+                    ${escapeHTML(
+                        searchInput.value
+                    )}
+                </strong>.
+
+            </div>
+
+        `;
+
+        return;
 
     }
 
-  }
+
+    results.innerHTML = "";
+
+
+    const fragment =
+        document
+        .createDocumentFragment();
+
+
+    matches.forEach(
+        word => {
+
+            const card =
+                document
+                .createElement(
+                    "div"
+                );
+
+
+            card.className =
+                "word";
+
+
+            /*
+                Quantidade de letras
+                digitadas pelo usuário.
+            */
+
+            const prefixLength =
+                searchInput
+                .value
+                .trim()
+                .length;
+
+
+            const start =
+                word.slice(
+                    0,
+                    prefixLength
+                );
+
+
+            const rest =
+                word.slice(
+                    prefixLength
+                );
+
+
+            /*
+                IMPORTANTE:
+
+                Não existe espaço
+                entre </span> e o resto.
+
+                Assim:
+
+                "a" + "gora"
+
+                aparece:
+
+                "agora"
+
+                e NÃO:
+
+                "a gora"
+            */
+
+            card.innerHTML =
+                '<span class="prefix">'
+                +
+                escapeHTML(start)
+                +
+                '</span>'
+                +
+                escapeHTML(rest);
+
+
+            card.addEventListener(
+
+                "click",
+
+                () =>
+                    copyWord(
+                        word
+                    )
+
+            );
+
+
+            fragment.appendChild(
+                card
+            );
+
+        }
+    );
+
+
+    results.appendChild(
+        fragment
+    );
+
+}
+
+
+/* COPIAR */
+
+async function copyWord(word) {
+
+    try {
+
+        await navigator
+            .clipboard
+            .writeText(word);
+
+
+        showToast(
+            word +
+            " copiado"
+        );
+
+    }
+
+    catch {
+
+        showToast(word);
+
+    }
+
+}
+
+
+/* NOTIFICAÇÃO */
+
+function showToast(text) {
+
+    toast.textContent =
+        text;
+
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    clearTimeout(
+        window.toastTimer
+    );
+
+
+    window.toastTimer =
+        setTimeout(
+            () => {
+
+                toast
+                    .classList
+                    .remove(
+                        "show"
+                    );
+
+            },
+
+            1200
+        );
+
+}
+
+
+/* SEGURANÇA HTML */
+
+function escapeHTML(text) {
+
+    const div =
+        document
+        .createElement(
+            "div"
+        );
+
+    div.textContent =
+        text;
+
+    return div.innerHTML;
+
+}
+
+
+/* BUSCA AUTOMÁTICA */
+
+let searchTimer;
+
+
+searchInput.addEventListener(
+
+    "input",
+
+    () => {
+
+        clearTimeout(
+            searchTimer
+        );
+
+
+        searchTimer =
+            setTimeout(
+                searchWords,
+                50
+            );
+
+    }
+
 );
 
-searchButton.addEventListener(
-  "click",
-  searchWords
+
+searchInput.addEventListener(
+
+    "keydown",
+
+    event => {
+
+        if (
+            event.key ===
+            "Enter"
+        ) {
+
+            searchWords();
+
+        }
+
+    }
+
 );
+
+
+searchButton.addEventListener(
+
+    "click",
+
+    searchWords
+
+);
+
+
+/* INICIAR */
 
 loadDictionary();
 
